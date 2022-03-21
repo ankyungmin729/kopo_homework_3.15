@@ -6,20 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #wrap{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .btn_box{
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
         body{
             background-color: lightyellow;
         }
         .bgcolor--blue{
             background-color: lightblue;
         }
+        .bgcolor--gray{
+            background-color: lightgray;
+        }
+
+        button{
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <button class="btn_bg">배경색상변경</button>
+    <div id="wrap">
+        <div class="btn_box">
+            <button class="btn_bg">배경색상변경 토글버튼</button>
+            <button class="btn_bg_reset">배경색상변경 리셋</button>
+            <button class="btn_bg_gray">배경색상변경 그레이</button>
+        </div>
+        
+    </div>
+    
     <script>
         const btnBg = document.querySelector('.btn_bg');
         btnBg.addEventListener('click', function(){
             document.body.classList.toggle('bgcolor--blue');
+        });
+
+        const btnBgReset = document.querySelector('.btn_bg_reset');
+        btnBgReset.addEventListener('click', function(){
+            document.body.classList.remove('bgcolor--blue');
+            document.body.classList.remove('bgcolor--gray');
+        });
+
+        const btnBgGray = document.querySelector('.btn_bg_gray');
+        btnBgGray.addEventListener('click',function(){
+            document.body.classList.add('bgcolor--gray');
         });
     </script>
 </body>
