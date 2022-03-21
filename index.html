@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightyellow;
+        }
+        .bgcolor--blue{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn_bg">배경색상변경</button>
+    <script>
+        const btnBg = document.querySelector('.btn_bg');
+        btnBg.addEventListener('click', function(){
+            document.body.classList.toggle('bgcolor--blue');
+        });
+    </script>
+</body>
+</html>
