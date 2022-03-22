@@ -4,66 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
     <title>2101110155_안경민</title>
-    <style>
-        #wrap{
-            width: 100%;
-            margin: 0 auto;
-        }
-        .btn_box{
-            width: 200px;
-            margin: 0 auto;
-            margin-top: 40px;
-        }
-        body{
-            background-color: lightyellow;
-        }
-        .bgcolor--blue{
-            background-color: lightblue;
-        }
-        .bgcolor--gray{
-            background-color: lightgray;
-        }
-
-        button{
-            display: block;
-            width: 200px;
-            height: 50px;
-            margin-bottom: 20px;
-            border: none;
-            border: 1px solid #333;
-            border-radius: 15px;
-            background-color: #fff;
-            
-        }
-    </style>
 </head>
 <body>
     <div id="wrap">
-        <div class="btn_box">
-            <button class="btn_bg">배경색상변경 토글버튼</button>
-            <button class="btn_bg_reset">배경색상변경 리셋</button>
-            <button class="btn_bg_gray">배경색상변경 그레이</button>
+        <div class="bg_img"></div>
+        <div class="btns">
+            <div class="container">
+                <div class="btns_menu">
+                    <button class="btn--toggle">배경색상변경 토글버튼</button>
+                    <button class="btn--reset">배경색상변경 리셋</button>
+                    <button class="btn--gray">배경색상변경 그레이</button>
+                    <button class="btn--img">배경이미지</button>
+                </div>
+            </div>
         </div>
         
+        
     </div>
-    
-    <script>
-        const btnBg = document.querySelector('.btn_bg');
-        btnBg.addEventListener('click', function(){
-            document.body.classList.toggle('bgcolor--blue');
-        });
-
-        const btnBgReset = document.querySelector('.btn_bg_reset');
-        btnBgReset.addEventListener('click', function(){
-            document.body.classList.remove('bgcolor--blue');
-            document.body.classList.remove('bgcolor--gray');
-        });
-
-        const btnBgGray = document.querySelector('.btn_bg_gray');
-        btnBgGray.addEventListener('click',function(){
-            document.body.classList.add('bgcolor--gray');
-        });
-    </script>
 </body>
 </html>
